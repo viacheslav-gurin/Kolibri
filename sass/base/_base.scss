@@ -1,0 +1,29 @@
+// Устанавливаем брейкпойнты для адаптивности
+// $bp-largest: 75em; // 1200px / 16px = 75em
+// $bp-large: 62.5em; // 1000px / 16px = 62.5em
+// $bp-medium: 50em; // 800px / 16px = 50em
+$bp-small: 37.5em; // 600px / 16px = 37.5em
+
+// Вроде бы раньше полагалось делать такой ресет в начале
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Устанавливаем размер шрифта, чтобы в дальнейшем пользоваться относительными единицами (rem)
+html {
+    font-size: 62.5%;
+}
+
+// Устанавливаем высоту картинки
+img {
+    max-height: 100%;
+
+    @media only screen and (max-width: $bp-small) {
+        max-width: 100%;
+        max-height: 50vh;
+    }
+}

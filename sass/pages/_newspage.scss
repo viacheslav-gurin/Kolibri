@@ -1,0 +1,22 @@
+body {
+    background-color: #EEEEEE;
+}
+
+// Основная CSS-сетка страницы
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: minmax(5rem, 1fr) minmax(min-content, 54rem) minmax(5rem, 1fr);
+    justify-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: repeat(3, auto);  
+    }
+}
+
+// Новостная лента
+.news-feed {
+    grid-column: 2 / 3;
+    padding: 2rem 0;
+}
